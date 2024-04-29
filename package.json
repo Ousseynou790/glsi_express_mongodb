@@ -1,5 +1,5 @@
 {
-  "name": "tp_express_mongodb",
+  "name": "backend_service_movies",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",

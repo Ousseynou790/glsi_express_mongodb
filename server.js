@@ -1,7 +1,8 @@
 const express = require("express");
-
+const router = require("./routes/movie.routes"); // Import du routeur des films
 const app = express();
-
+app.use(express.json());
+app.use("/api/movies", router); // Utilisation du routeur des films pour les requêtes liées aux films
 const logger = require("morgan");
 
 const PORT = process.env.PORT || 4002;
@@ -23,7 +24,7 @@ db.mongoose
 app.use(logger("dev"));
 
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to glsi students application." });
+  res.json({ message: "Welcome to the movie application." });
 });
 
 app.listen(PORT, () => {
